@@ -15,7 +15,7 @@
                 <ul class="nav masthead-nav">
                   <li><a href="../index.php">Home</a></li>
                   <li class="active"><a href="new_account.php">Create an Account</a></li>
-                  <li><a href="https://www.sudhakarannadurai.wordpress.com">About Me</a></li>
+                  <li><a href="https://sudhakarannadurai.wordpress.com/aboutme/">About Me</a></li>
                 </ul>
               </nav>
             </div>
