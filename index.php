@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+	<style type="text/css">
+
+	.sudhakar {
+	    display: none;
+	}
+	
+	@media (max-width: 767px) {
+		.sudhakar {
+	        display: block;
+	        text-align: center;
+	    }
+	}
+
+
+	</style>
+</head>
+<body>
+<div class="sudhakar">
+	
+	<button id="show-beta" >beta</button>
+	<button id="show-public">Public</button>
+
+</div>
+
+
+<div class="para1"> <p>public publicpublic publicpublic publicpublic publicpublic publicpublic publicpublic publicpublic publicpublic publicpublic publicpublic publicpublic publicpublic publicpublic publicpublic publicpublic publicpublic publicpublic publicpublic publicpublic publicpublic publicpublic publicpublic publicpublic publicpublic publicpublic publicpublic publicpublic publicpublic publicpublic publicpublic publicpublic publicpublic publicpublic publicpublic publicpublic publicpublic publicpublic publicpublic publicpublic public</p></div>
+
+<div class="para2"> <p>beta betabeta betabeta betabeta betabeta betabeta betabeta betabeta betabeta betabeta betabeta betabeta betabeta betabeta betabeta betabeta betabeta betabeta betabeta betabeta betabeta betabeta betabeta betabeta betabeta betabeta betabeta betabeta betabeta betabeta betabeta betabeta betabeta betabeta betabeta betabeta betabeta betabeta betabeta betabeta beta</p></div>
+
+
+</body>
+
+	
+
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+<script type="text/javascript">
+	
+	$(window).on('resize', function(){
+	     display = $('.sudhakar').css("display");
+		if(display == "block"){
+		   $('.para2').hide();
+		} else{
+			$('.para2').show();
+		}
+
+	});
+
+	$("#show-beta").click(function(){
+		$('.para2').show();
+		$('.para1').hide();
+	});
+
+	$("#show-public").click(function(){
+		$('.para1').show();
+		$('.para2').hide();
+	});
+
+
+
+</script>
+
+
+
+</html>
