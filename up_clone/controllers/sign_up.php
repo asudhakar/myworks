@@ -13,6 +13,7 @@ function finish_sign_up($params){
 	$password = $params['password'];
 	encrypt_password($password);
 	$params['password'] = $password;
+	$params['username'] = rand_string();
 	get_insert_query('users',$params);
 }
 

@@ -3,7 +3,7 @@
 	login_page_session_check();
 	include_once '../model/db.php'; 
 	include_once 'html_header.php'; 
-	
+	$show_error = $_GET['error'];
 ?>
 	<div class="site-wrapper">
     	<div class="site-wrapper-inner">
@@ -20,13 +20,35 @@
               </nav>
             </div>
           </div>
+          <?php if(isset($_GET['error'])&&$_GET['error']=='show_error'){ ?>
+
+
+          <div class="alert alert-danger"><strong>Error!</strong> Username or Password is incorrect</div>
+
+          <?php } ?>
+
           <div class="inner cover">
             <h1 class="cover-heading">Login</h1>
-            <input type="text" name="username" placeholder="Username / Email" required class="form-control give-a-down-space" autofocus>
+            <form action="../controllers/login.php" method="post">
+              <input type="text" name="username" placeholder="Username / Email" required class="form-control give-a-down-space" autofocus>
 
-            <input type="password" name="password" placeholder="Password" required class="form-control give-a-down-space" >
-            <button class="btn btn-lg btn-success btn-block" type="submit">Sign in</button>
+              <input type="password" name="password" placeholder="Password" required class="form-control give-a-down-space" >
+              <button class="btn btn-lg btn-success btn-block" type="submit">Sign in</button>
+            </form>
           </div>
 
        
-<?php include_once 'html_footer.php'; ?>
+<?php include_once 'html_footer.php';
+
+  if (isset($_POST['submit'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    if(validate_User($username, $password)){
+      loginPageSessionCheck();
+    }
+    echo 'Invalid user!';
+  } 
+
+?>
+
+
