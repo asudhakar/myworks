@@ -1,7 +1,8 @@
 <?php 
-	include_once '../app_functions/functions.php';
+	
+  include_once '../controllers/login.php';
+  include_once '../app_functions/functions.php';
 	login_page_session_check();
-	include_once '../model/db.php'; 
 	include_once 'html_header.php'; 
 	$show_error = $_GET['error'];
 ?>
@@ -29,7 +30,7 @@
 
           <div class="inner cover">
             <h1 class="cover-heading">Login</h1>
-            <form action="../controllers/login.php" method="post">
+            <form method="post">
               <input type="text" name="username" placeholder="Username / Email" required class="form-control give-a-down-space" autofocus>
 
               <input type="password" name="password" placeholder="Password" required class="form-control give-a-down-space" >
@@ -43,8 +44,8 @@
   if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
-    if(validate_User($username, $password)){
-      loginPageSessionCheck();
+    if(validate_user($username, $password)){
+      login_page_session_check();
     }
     echo 'Invalid user!';
   } 
