@@ -30,26 +30,15 @@
 
           <div class="inner cover">
             <h1 class="cover-heading">Login</h1>
-            <form method="post">
+            <form method="post" action="../controllers/login.php">
               <input type="text" name="username" placeholder="Username / Email" required class="form-control give-a-down-space" autofocus>
 
               <input type="password" name="password" placeholder="Password" required class="form-control give-a-down-space" >
-              <button class="btn btn-lg btn-success btn-block" type="submit">Sign in</button>
+              <input class="btn btn-lg btn-success btn-block" type="submit" name="submit" value="Login">
             </form>
           </div>
 
        
-<?php include_once 'html_footer.php';
-
-  if (isset($_POST['submit'])) {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-    if(validate_user($username, $password)){
-      login_page_session_check();
-    }
-    echo 'Invalid user!';
-  } 
-
-?>
+<?php include_once 'html_footer.php';?>
 
 
