@@ -1,7 +1,8 @@
 <?php  
 	
-	include_once 'app_functions/functions.php';	
-	landing_page_session_check();
+	print_r($_SESSION);
+	// include_once 'app_functions/functions.php';	
+	// landing_page_session_check();
 
 ?>
 

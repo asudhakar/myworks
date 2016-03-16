@@ -1,5 +1,5 @@
 <?php 
-	
+	include_once '../model/db.php';
 	function landing_page_session_check(){
 		if(empty($_SESSION["user_details"])){
 			header('location:view/login.php');
@@ -22,8 +22,9 @@
 		unset($var);
 	}
 
-	function real_escape(&$data){
-		$data = mysqli_real_escape_string($data);
+	function real_escape($data){
+		$db = db_connect();
+		return mysqli_real_escape_string($db, $data);
 	}
 
 	function logout(){
