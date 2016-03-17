@@ -1,8 +1,7 @@
 <?php  
-	
-	print_r($_SESSION);
-	// include_once 'app_functions/functions.php';	
-	// landing_page_session_check();
+	session_start();
+	include_once 'app_functions/functions.php';	
+	landing_page_session_check();
 
 ?>
 
@@ -17,6 +16,7 @@
 	<div class="container">
 
 	<h1>Hello</h1>
+	<a href="view/login.php?action=logout">Logout</a>
 
 	</div>
 

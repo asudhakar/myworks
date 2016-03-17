@@ -1,17 +1,22 @@
 <?php 
-	
-  include_once '../controllers/login.php';
+session_start();
+if(!isset($_GET['action'])){
   include_once '../app_functions/functions.php';
-	login_page_session_check();
-	include_once 'html_header.php'; 
-	$show_error = $_GET['error'];
+  login_page_session_check();
+  include_once 'html_header.php'; 
+  $show_error = $_GET['error'];
+} else{
+  session_destroy();
+  header("location: login.php");
+}
+	
 ?>
 	<div class="site-wrapper">
     	<div class="site-wrapper-inner">
         <div class="cover-container">
           <div class="masthead clearfix">
             <div class="inner">
-              <h3 class="masthead-brand">Uplust Clone</h3>
+              <h3 class="masthead-brand">My App</h3>
               <nav>
                 <ul class="nav masthead-nav">
                   <li class="active"><a href="../index.php">Home</a></li>

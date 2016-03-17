@@ -1,6 +1,7 @@
 <?php 
+session_start();
 	include_once '../app_functions/functions.php';
-	signup_page_seesion_check();
+	signup_page_session_check();
 	include_once '../model/db.php'; 
 	include_once 'html_header.php'; 
 	
@@ -10,7 +11,7 @@
         <div class="cover-container">
           <div class="masthead clearfix">
             <div class="inner">
-              <h3 class="masthead-brand">Uplust Clone</h3>
+              <h3 class="masthead-brand">My App</h3>
               <nav>
                 <ul class="nav masthead-nav">
                   <li><a href="../index.php">Home</a></li>
