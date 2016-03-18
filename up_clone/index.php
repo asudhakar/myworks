@@ -39,6 +39,7 @@
 	      <input class="form-control input-lg" id="textbox-user-question" type="text" autofocus>
 	  </div>
       <footer class="footer">
+
         <p>© 2015 Company, Inc.</p>
       </footer>
     </div> 
@@ -58,7 +59,7 @@
 					url: 'controllers/index.php',
 					data: {name : user_question},
 					success: function(data) {
-						$( "#output_text" ).html('<br/><div class="row"><div class="col-xs-3"><button type="button" class="btn btn-info" id="publishButton">publish</button>  </div><div class="col-xs-8"></div><div class="col-xs-1"><a href="view/addNew.php?name=sudhaa"><button type="button" class="btn btn-info" id="addButton">Add New</button></a></div></div><hr/>' + data );
+						$( "#output_text" ).html( data );
 						jQuery('#output_text').show();
 						jQuery('#loading').hide();
 					}
