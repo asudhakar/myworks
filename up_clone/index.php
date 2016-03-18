@@ -25,7 +25,7 @@
             <li role="presentation"><a href="view/login.php?action=logout">Logout</a></li>
           </ul>
         </nav>
-        <h3 class="text-muted">Project name</h3>
+        <h3 class="text-muted">My App</h3>
       </div>
       <div class="jumbotron" style="height: 70%;">
         <p id="loading" style="display: none">Loading</p>
@@ -40,7 +40,7 @@
 	  </div>
       <footer class="footer">
 
-        <p>© 2015 Company, Inc.</p>
+         <p style="text-align: center">All rights are reserved by <a href="#">Tech Undefined</a>, by <a href="https://twitter.com/sudhakar_valar">@sudhakar</a>.</p>
       </footer>
     </div> 
     <script src="js/ie10-viewport-bug-workaround.js"></script>
