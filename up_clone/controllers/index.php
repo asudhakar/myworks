@@ -4,10 +4,7 @@
 
 $user_question = trim($_POST['name']);
 if(!empty($user_question)){
-	$url_slug = make_it_url($user_question);
-	$total_url = 'http://localhost:5000/'.$url_slug;
-	$json = file_get_contents($total_url);
-	print_r($json);
+	print_r(retun_user_data_as_array($user_question));
 }
 
 function make_it_url($user_question){
@@ -29,8 +26,17 @@ function show_default(){
 }
 
 
+
+function retun_user_data_as_array($user_question){
+	$url_slug = make_it_url($user_question);
+	$total_url = 'http://localhost:5000/'.$url_slug;
+	$json = file_get_contents($total_url);
+	return json_decode($json, true);
+}
+
+
 // if($user_question == "song"){
-	// 	echo play_song('http://d3.mymp3song.com:85/files/sfd70/34840/Tera%20Ishq%20Jee%20Paaun%20-%20Aditya%20Narayan(MyMp3Song.Com).mp3');
-	// }else{
-	// 	echo show_default();
-	// }
+// 		echo play_song('http://d3.mymp3song.com:85/files/sfd70/34840/Tera%20Ishq%20Jee%20Paaun%20-%20Aditya%20Narayan(MyMp3Song.Com).mp3');
+// 	}else{
+// 		echo show_default();
+// 	}
