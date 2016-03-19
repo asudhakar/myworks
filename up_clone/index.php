@@ -36,7 +36,10 @@
 
       </div>
       <div class="form-group">
-	      <input class="form-control input-lg" id="textbox-user-question" type="text" autofocus>
+      <form>
+        <input class="form-control input-lg" id="textbox-user-question" placeholder="Type here anything &#128515;, and press Enter &#128521;" type="text" required autofocus>
+      </form>
+	      
 	  </div>
       <footer class="footer">
 
@@ -52,19 +55,21 @@
 			var keycode = (event.keyCode ? event.keyCode : event.which);
 			if(keycode == '13'){
 				var user_question = $('#textbox-user-question').val();
-				jQuery('#output_text').hide();
-				jQuery('#loading').show();
-				$.ajax({
-					type: "POST",
-					url: 'controllers/index.php',
-					data: {name : user_question},
-					success: function(data) {
-						$( "#output_text" ).html( data );
-						jQuery('#output_text').show();
-						jQuery('#loading').hide();
-					}
-				});
-				$('#textbox-user-question').val("");
+        if(user_question.length > 0){
+          jQuery('#output_text').hide();
+          jQuery('#loading').show();
+          $.ajax({
+            type: "POST",
+            url: 'controllers/index.php',
+            data: {name : user_question},
+            success: function(data) {
+              $( "#output_text" ).html( data );
+              jQuery('#output_text').show();
+              jQuery('#loading').hide();
+            }
+          });
+          $('#textbox-user-question').val("");
+        }
 			}
 		});
 	</script>
