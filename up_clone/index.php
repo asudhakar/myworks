@@ -2,7 +2,11 @@
   session_start();
   include_once 'app_functions/functions.php'; 
   landing_page_session_check();
+
+
 ?>
+
+
 <html lang="en"><head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,8 +40,8 @@
 
       </div>
       <div class="form-group">
-      <form>
-        <input class="form-control input-lg" id="textbox-user-question" placeholder="Type here anything &#128515;, and press Enter &#128521;" type="text" required autofocus>
+      <form action="controllers/index.php" method="post">
+        <input class="form-control input-lg" id="textbox-user-question" name="test" placeholder="Type here anything &#128515;, and press Enter &#128521;" type="text" required autofocus>
       </form>
 	      
 	  </div>
@@ -50,28 +54,28 @@
   	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	<script type="text/javascript">
 		
-		$('#output_text').show();
-		$('#textbox-user-question').keypress(function(event){
-			var keycode = (event.keyCode ? event.keyCode : event.which);
-			if(keycode == '13'){
-				var user_question = $('#textbox-user-question').val();
-        if(user_question.length > 0){
-          jQuery('#output_text').hide();
-          jQuery('#loading').show();
-          $.ajax({
-            type: "POST",
-            url: 'controllers/index.php',
-            data: {name : user_question},
-            success: function(data) {
-              $( "#output_text" ).html( data );
-              jQuery('#output_text').show();
-              jQuery('#loading').hide();
-            }
-          });
-          $('#textbox-user-question').val("");
-        }
-			}
-		});
+		// $('#output_text').show();
+		// $('#textbox-user-question').keypress(function(event){
+		// 	var keycode = (event.keyCode ? event.keyCode : event.which);
+		// 	if(keycode == '13'){
+		// 		var user_question = $('#textbox-user-question').val();
+  //       if(user_question.length > 0){
+  //         jQuery('#output_text').hide();
+  //         jQuery('#loading').show();
+  //         $.ajax({
+  //           type: "POST",
+  //           url: 'controllers/index.php',
+  //           data: {name : user_question},
+  //           success: function(data) {
+  //             $( "#output_text" ).html( data );
+  //             jQuery('#output_text').show();
+  //             jQuery('#loading').hide();
+  //           }
+  //         });
+  //         $('#textbox-user-question').val("");
+  //       }
+		// 	}
+		// });
 	</script>
 
 </body></html>
