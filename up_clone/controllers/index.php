@@ -28,8 +28,9 @@ function show_default(){
 
 
 function retun_user_data_as_array($user_question){
+	echo "$user_question";
 	$url_slug = make_it_url($user_question);
-	$total_url = 'http://localhost:5000/'.$url_slug;
+	$total_url = 'http://127.0.0.1:5000/'.$url_slug;
 	$json = file_get_contents($total_url);
 	echo $json;
 	return json_decode($json, true);
