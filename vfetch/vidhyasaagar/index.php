@@ -6,4 +6,7 @@
     require('SpreadsheetReader.php');
 
     $Reader = new SpreadsheetReader('test.xlsx');
-    print_r($Reader);
+   foreach ($Reader as $Row)
+    {
+        print_r($Row);
+    }
