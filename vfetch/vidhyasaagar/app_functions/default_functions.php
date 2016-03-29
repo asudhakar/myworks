@@ -8,7 +8,7 @@
     $Reader = new SpreadsheetReader('../files/CUSTOMERDETAILS.xls');
     foreach ($Reader as $Row)
     {
-    	$final_output[$Row[1]]['name'][$Row[3]][] = $Row[2];
+    	$final_output[$Row[1]]['number'][$Row[3]][] = $Row[2];
     }
 
     

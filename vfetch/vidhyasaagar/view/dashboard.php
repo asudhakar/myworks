@@ -27,13 +27,6 @@
 <div class="container">
             
   <table class="table">
-    <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-      </tr>
-    </thead>
     <tbody>
       <tr class="success">
         <td>John</td>
