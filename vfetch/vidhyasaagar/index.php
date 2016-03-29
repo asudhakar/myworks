@@ -21,7 +21,7 @@
 
     require('SpreadsheetReader.php');
 
-    $Reader = new SpreadsheetReader('files/test.xlsx');
+    $Reader = new SpreadsheetReader('files/CUSTOMERDETAILS.xls');
    foreach ($Reader as $Row)
     {
         print_r($Row);
