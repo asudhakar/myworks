@@ -38,11 +38,10 @@
       			foreach ($names as $key => $name) {
       				
       				$html2 = $html2.'<td><input type="checkbox" name="name'.$i.' value="'.$name.'|'.$number.'">'.$name.'('.$number.'</td>';
-      				
+      				$i++;
       			}
-      		}
+      		}$totalhtml = $totalhtml.$html1.$html2;
       	}
-      	$totalhtml = $totalhtml.$html1.$html2;
       } 
 
       echo "$totalhtml";
