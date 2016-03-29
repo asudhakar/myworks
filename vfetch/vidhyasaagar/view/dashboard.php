@@ -6,6 +6,15 @@
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style type="text/css">
+
+  div>span{
+  	    display: block;
+    margin-bottom: -20px;
+    margin-left: 193px;
+  }
+
+  </style>
 </head>
 <body>
 <?php 
@@ -37,8 +46,7 @@
       		foreach ($number_and_names as $number => $names) {
       			foreach ($names as $key => $name) {
       				
-      				$html2 = $html2.'<span style="    display: block;
-    margin-bottom: -20px;"><input type="checkbox" name="name'.$i.' value="'.$name.'|'.$number.'">'.$name.'('.$number.')</span>';
+      				$html2 = $html2.'<span><input type="checkbox" name="name'.$i.' value="'.$name.'|'.$number.'">'.$name.'('.$number.')</span>';
       				$i++;
       			}
       		}$totalhtml = $totalhtml.'<div>'.$html1.$html2.'</div>';
