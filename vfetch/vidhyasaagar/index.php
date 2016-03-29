@@ -24,7 +24,9 @@
     $Reader = new SpreadsheetReader('files/CUSTOMERDETAILS.xls');
    foreach ($Reader as $Row)
     {
-    	$sudhakar[] = $Row;
+    	$sudhakar[$Row[1]]['name'] = $Row[1];
+    	$sudhakar[$Row[1]]['mobileno'] = $Row[2];
+
     }
 
     echo "<pre>";
