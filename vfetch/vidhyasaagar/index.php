@@ -24,8 +24,7 @@
     $Reader = new SpreadsheetReader('files/CUSTOMERDETAILS.xls');
    foreach ($Reader as $Row)
     {
-    	$sudhakar[$Row[1]]['name'][] = $Row[2];
-    	$sudhakar[$Row[1]]['mobileno'][] = $Row[3];
+    	$sudhakar[$Row[1]]['name'][$Row[2]] = $Row[3];
 
     }
 
