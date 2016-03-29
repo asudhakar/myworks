@@ -28,11 +28,14 @@
             
   <table class="table">
     <tbody>
-      <?php foreach ($final_output as $class => $student_values) {
+      <?php
+      $i = 1; 
+      foreach ($final_output as $class => $student_values) {
       	foreach ($student_values as $number => $number_and_names) {
       		foreach ($number_and_names as $number => $names) {
       			foreach ($names as $key => $name) {
-      				echo "$name";
+      				echo $i."$name<br/><hr/>";
+      				$i++;
       			}
       		}
       	}
