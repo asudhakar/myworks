@@ -38,8 +38,7 @@
       			foreach ($names as $key => $name) {
       				
       				$html2 = $html2.'<span style="    display: block;
-    margin-bottom: -20px;
-    margin-left: 193px;"><input type="checkbox" name="name'.$i.' value="'.$name.'|'.$number.'">'.$name.'('.$number.')</span>';
+    margin-bottom: -20px;"><input type="checkbox" name="name'.$i.' value="'.$name.'|'.$number.'">'.$name.'('.$number.')</span>';
       				$i++;
       			}
       		}$totalhtml = $totalhtml.'<div>'.$html1.$html2.'</div>';
