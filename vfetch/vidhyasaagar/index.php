@@ -24,5 +24,7 @@
     $Reader = new SpreadsheetReader('files/CUSTOMERDETAILS.xls');
    foreach ($Reader as $Row)
     {
+    	echo "<pre>";
         print_r($Row);
+        echo "</pre>";
     }
