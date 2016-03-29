@@ -37,7 +37,7 @@
       		foreach ($number_and_names as $number => $names) {
       			foreach ($names as $key => $name) {
       				
-      				$html2 = $html2.'<div><input type="checkbox" name="name'.$i.' value="'.$name.'|'.$number.'">'.$name.'('.$number.')</div>';
+      				$html2 = $html2.'<div style="float: left; margin-left: 28px;"><input type="checkbox" name="name'.$i.' value="'.$name.'|'.$number.'">'.$name.'('.$number.')</div>';
       				$i++;
       			}
       		}$totalhtml = $totalhtml.$html1.$html2;
