@@ -28,21 +28,15 @@
             
   <table class="table">
     <tbody>
-      <tr class="success">
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr class="danger">
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr class="info">
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
+      <?php foreach ($final_output as $class => $student_values) {
+      	foreach ($student_values as $number => $number_and_names) {
+      		foreach ($number_and_names as $number => $names) {
+      			foreach ($names as $key => $name) {
+      				echo "$name";
+      			}
+      		}
+      	}
+      } ?>
     </tbody>
   </table>
 </div>
