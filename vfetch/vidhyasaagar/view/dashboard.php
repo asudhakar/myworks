@@ -29,6 +29,7 @@
   <table class="table">
     <tbody>
       <?php
+
       $i = 1; 
       foreach ($final_output as $class => $student_values) {
       	$html1 = "<h1>$class</h1>";
@@ -41,8 +42,14 @@
       			}
       		}
       	}
+      	$totalhtml = $totalhtml.$html1.$html2;
+      } 
 
-      } ?>
+      echo "$totalhtml";
+      $totalhtml = "";
+      $html1 = "";
+      $html2 = "";
+      ?>
     </tbody>
   </table>
 </div>
