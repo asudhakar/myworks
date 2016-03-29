@@ -49,7 +49,7 @@
       				$html2 = $html2.'<span><input type="checkbox" name="name'.$i.' value="'.$name.'|'.$number.'"> '.$name.'('.$number.')</span>';
       				$i++;
       			}
-      		}$totalhtml = $totalhtml.'<div>'.$html1.$html2.'</div>';
+      		}$totalhtml = $totalhtml.'<div>'.$html1.$html2.'</div><hr/>';
       	}
       } 
 
