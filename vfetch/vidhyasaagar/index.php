@@ -1,4 +1,4 @@
-<!-- 
+
 
 
 <!DOCTYPE html>
@@ -12,22 +12,5 @@
 </form>
 
 </body>
-</html> -->
+</html>
 
-<?php 
-
-
-    require('php-excel-reader/excel_reader2.php');
-
-    require('SpreadsheetReader.php');
-
-    $Reader = new SpreadsheetReader('files/CUSTOMERDETAILS.xls');
-   foreach ($Reader as $Row)
-    {
-    	$sudhakar[$Row[1]]['name'][$Row[2]][] = $Row[3];
-
-    }
-
-    echo "<pre>";
-    print_r($sudhakar);
-    echo "</pre>";
