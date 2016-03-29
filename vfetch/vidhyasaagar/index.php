@@ -24,7 +24,9 @@
     $Reader = new SpreadsheetReader('files/CUSTOMERDETAILS.xls');
    foreach ($Reader as $Row)
     {
-    	echo "<pre>";
-        print_r($Row);
-        echo "</pre>";
+    	$sudhakar[] = $Row;
     }
+
+    echo "<pre>";
+    print_r($sudhakar);
+    echo "</pre>";
