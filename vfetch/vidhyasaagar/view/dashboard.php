@@ -10,6 +10,8 @@
 
   div>span{
   	display: block;
+    font-size: 19px;
+    margin-bottom: 9px;
   }
 
   </style>
@@ -44,7 +46,7 @@
       		foreach ($number_and_names as $number => $names) {
       			foreach ($names as $key => $name) {
       				
-      				$html2 = $html2.'<span><input type="checkbox" name="name'.$i.' value="'.$name.'|'.$number.'">'.$name.'('.$number.')</span>';
+      				$html2 = $html2.'<span><input type="checkbox" name="name'.$i.' value="'.$name.'|'.$number.'"> '.$name.'('.$number.')</span>';
       				$i++;
       			}
       		}$totalhtml = $totalhtml.'<div>'.$html1.$html2.'</div>';
