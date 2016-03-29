@@ -9,9 +9,7 @@
   <style type="text/css">
 
   div>span{
-  	    display: block;
-    margin-bottom: -20px;
-    margin-left: 193px;
+  	display: block;
   }
 
   </style>
