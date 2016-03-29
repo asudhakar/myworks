@@ -1,4 +1,4 @@
-
+<!-- 
 
 
 <!DOCTYPE html>
@@ -12,17 +12,17 @@
 </form>
 
 </body>
-</html>
+</html> -->
+
+<?php 
 
 
+    require('php-excel-reader/excel_reader2.php');
 
-<!-- 
-   //  require('php-excel-reader/excel_reader2.php');
+    require('SpreadsheetReader.php');
 
-   //  require('SpreadsheetReader.php');
-
-   //  $Reader = new SpreadsheetReader('files/test.xlsx');
-   // foreach ($Reader as $Row)
-   //  {
-   //      print_r($Row);
-   //  } -->
+    $Reader = new SpreadsheetReader('files/test.xlsx');
+   foreach ($Reader as $Row)
+    {
+        print_r($Row);
+    }
