@@ -31,15 +31,17 @@
       <?php
       $i = 1; 
       foreach ($final_output as $class => $student_values) {
-      	foreach ($student_values as $number => $number_and_names) {
+      	$html1 = "<h1>$class</h1>";
+      	foreach ($student_values as $number_text => $number_and_names) {
       		foreach ($number_and_names as $number => $names) {
       			foreach ($names as $key => $name) {
-      				echo "<h1>$class</h1>";
-      				echo $i."$name<br/><hr/>";
-      				$i++;
+      				
+      				$html2 = $html2.'<td><input type="checkbox" name="name'.$i.' value="'.$name.'|'.$number.'">'.$name.'('.$number.'</td>';
+      				
       			}
       		}
       	}
+
       } ?>
     </tbody>
   </table>
