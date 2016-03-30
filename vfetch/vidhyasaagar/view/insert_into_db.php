@@ -17,7 +17,7 @@ foreach ($name_and_numbers as $key => $number) {
 	
 }
 
-
+header("location : ../index.php");
 
 	function db_connect(){
 		$connection = mysqli_connect('localhost', 'root', 'palaniM@67', 'up');
@@ -37,4 +37,4 @@ foreach ($name_and_numbers as $key => $number) {
 
 
 
-	header("location : ../index.php");
+	
