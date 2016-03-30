@@ -24,9 +24,9 @@
 
 	function createSession($data){
 		$userDetails['id'] = '1';
-	 	$userDetails['username'] = 'admin';
-	 	$userDetails['email'] = 'admin@revmakx.com';
-	 	$userDetails['password'] = 'changeNow^78';
+	 	$userDetails['username'] = 'vidyasaagar';
+	 	$userDetails['email'] = 'vefetchtechnologies@gmail.com';
+	 	$userDetails['password'] = 'vidyasaagar';
 	 	$userDetails['admin'] = '1';
 		$_SESSION["userDetails"] = base64_encode(serialize($userDetails));
 		if(isset($_SESSION['userDetails'])){
@@ -51,7 +51,7 @@
 	function isValidateUser($username, $password){
 		realEscape($username);
 		realEscape($password);
-		if($username == "admin" && $password == "changeNow^78"){
+		if($username == "vidyasaagar" && $password == "vidyasaagar"){
 			return createSession($username);
 		}else{
 			return false;
