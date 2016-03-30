@@ -40,7 +40,7 @@ function updateCount() {
 
 <body>
 <div class="container">
-<form action="insert_into_db.php" method="post">
+<form action="insert_into_db.php" method="get">
 	<input type="hidden" value="<?php $name_and_number ?>">
 	<h2>Enter the message</h2>
   <textarea class="form-control" rows="5" id="comment"></textarea>
