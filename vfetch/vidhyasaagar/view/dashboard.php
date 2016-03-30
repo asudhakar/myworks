@@ -38,8 +38,8 @@
 <h1>Select Contacts</h1>
 
 <form method="post" action="message_process.php">
-	
 
+<input type="hidden" name="path" value="<?php echo $file_path; ?>">
 <input type="checkbox" id="checkAll">Check All
 
             
