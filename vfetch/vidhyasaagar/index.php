@@ -1,4 +1,12 @@
-
+<?php
+include('controllers/function.php');
+	if($_GET['logout']=='logout'){
+		logOut();
+		header('location: view/login.php');
+	}else{
+		loginPageSessionCheck();
+	}
+?>
 <html lang="en"><head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
