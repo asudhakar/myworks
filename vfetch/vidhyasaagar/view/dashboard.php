@@ -25,9 +25,7 @@
 		unset($final_output['GROUP BY']);
 	}
 
-	echo "<pre>";
-    print_r($final_output);
-    echo "</pre>";
+
 
 
 
