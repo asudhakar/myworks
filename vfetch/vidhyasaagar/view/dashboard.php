@@ -10,7 +10,7 @@
 
   div>span{
   	display: block;
-    font-size: 19px;
+    font-size: 14px;
     margin-bottom: 9px;
   }
 
@@ -33,6 +33,10 @@
  ?>
 <div class="container">
 
+
+
+<h1>Step2 :- Select Peoples</h1>
+
 <form method="get" action="process.php">
 	
 
@@ -45,7 +49,7 @@
 
       $i = 1; 
       foreach ($final_output as $class => $student_values) {
-      	$html1 = "<h1>$class</h1>";
+      	$html1 = "<h2>$class</h2>";
       	foreach ($student_values as $number_text => $number_and_names) {
       		foreach ($number_and_names as $number => $names) {
       			foreach ($names as $key => $name) {
