@@ -8,7 +8,7 @@
     $Reader = new SpreadsheetReader($file_path);
     foreach ($Reader as $Row)
     {
-    	$final_output[$Row[1]]['number'][$Row[3]][] = $Row[2];
+    	$final_output[$Row[0]]['number'][$Row[2]][] = $Row[1];
     }
 
     
