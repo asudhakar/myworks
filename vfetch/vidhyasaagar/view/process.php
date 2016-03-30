@@ -42,7 +42,7 @@ function updateCount() {
 <div class="container">
 <form action="insert_into_db.php" method="post">
 	<input type="hidden" value="<?php $name_and_number ?>">
-	<h1>Enter the message here to send it to selected contacts</h1>
+	<h2>Enter the message</h2>
   <textarea class="form-control" rows="5" id="comment"></textarea>
 <span id="characters"><span>
 <input type="submit" value="send">
