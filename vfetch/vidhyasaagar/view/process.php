@@ -39,9 +39,10 @@ function updateCount() {
 </head>
 
 <body>
+<div class="container">
   <textarea class="form-control" rows="5" id="comment"></textarea>
 <span id="characters"><span>
-  
+  </div>
 
 
 
