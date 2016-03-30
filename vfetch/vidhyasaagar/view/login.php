@@ -1,6 +1,6 @@
 <?php     	
 	include_once '../controllers/function.php';
-	if($_GET['logout']=='logout'){
+	if($_GET['action']=='logout'){
 		logOut();
 		header('location: login.php');
 	}else{
