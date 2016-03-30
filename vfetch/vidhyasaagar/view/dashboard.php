@@ -55,7 +55,7 @@
       			foreach ($names as $key => $name) {
       				
       				$html2 = $html2.'<span><input type="checkbox" name = "name[]" value="'.$number.'"> &nbsp;&nbsp;'.$name.'('.$number.')</span>';
-      			}$totalhtml = $totalhtml.'<div>'.$html1.$html2.'</div><hr/>';
+      			}$totalhtml = $totalhtml.'<div>'.$html1.$html2.'</div><hr/>';$html2 = "";
       		}
       	}
       } 
@@ -63,7 +63,7 @@
       echo "$totalhtml";
       $totalhtml = "";
       $html1 = "";
-      $html2 = "";
+      
       ?>
     </tbody>
   </table>
