@@ -1,6 +1,6 @@
 <?php 
 
-$name_and_number = $_GET['name'];
+$name_and_number = $_POST['name'];
 $name_and_number = base64_encode(serialize($name_and_number));
 
 
@@ -39,7 +39,7 @@ function updateCount() {
 
 <body>
 <div class="container">
-<form action="insert_into_db.php" method="get">
+<form action="insert_into_db.php" method="post">
 	<input type="hidden" name="name_and_number" value="<?php echo $name_and_number; ?>">
 	<h2>Enter the message</h2>
   <textarea name="message" class="form-control" rows="5" id="comment"></textarea>

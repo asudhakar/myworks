@@ -2,8 +2,8 @@
 
 
 
-$name_and_numbers = $_GET['name_and_number'];
-$message = $_GET['message'];
+$name_and_numbers = $_POST['name_and_number'];
+$message = $_POST['message'];
 $name_and_numbers = unserialize(base64_decode($name_and_numbers));
 
 
@@ -37,4 +37,4 @@ foreach ($name_and_numbers as $key => $number) {
 
 
 
-	header("location : ../index.php")
+	header("location : ../index.php");

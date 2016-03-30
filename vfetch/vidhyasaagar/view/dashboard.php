@@ -35,12 +35,12 @@
 
 
 
-<h1>Step2 :- Select Peoples</h1>
+<h1>Select Contacts</h1>
 
-<form method="get" action="process.php">
+<form method="post" action="message_process.php">
 	
 
-
+<input type="checkbox" id="checkAll">Check All
 
             
   <table class="table">
@@ -72,6 +72,14 @@
 </div>
 
 
+<script type="text/javascript">
+  
+
+$('body').on('change', '#checkAll', function(){
+      $("input:checkbox").prop('checked', $(this).prop("checked"));
+    });
+
+</script>
 
 
 
