@@ -41,9 +41,9 @@ function updateCount() {
 <body>
 <div class="container">
 <form action="insert_into_db.php" method="get">
-	<input type="hidden" value="<?php $name_and_number ?>">
+	<input type="hidden" name="name_and_number"> value="<?php $name_and_number ?>">
 	<h2>Enter the message</h2>
-  <textarea class="form-control" rows="5" id="comment"></textarea>
+  <textarea name="message" class="form-control" rows="5" id="comment"></textarea>
 <span id="characters"><span></span></span>
 <input type="submit" value="send">
 </form>
