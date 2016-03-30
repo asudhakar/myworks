@@ -59,7 +59,9 @@
 	}
 
 	function logOut(){
+		session_start();
 		session_destroy();   
+	    header('Location:login.php');  
 	}
 
 	function executeQuery($query, $link){
