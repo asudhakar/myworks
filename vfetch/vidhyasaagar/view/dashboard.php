@@ -67,7 +67,7 @@
       ?>
     </tbody>
   </table>
-  <input type="submit" value="submit">
+  <input type="submit" class="btn btn-primary" value="submit">
   </form>
 </div>
 
