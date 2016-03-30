@@ -16,6 +16,6 @@ echo "</pre>";
 
 
 foreach ($name_and_numbers as $key => $number) {
-	$sql = "INSERT INTO messageout SET ('MessageTo' => $number, 'MessageText' => $message)";
+	$sql = "INSERT INTO `messageout` (`MessageTo` , `MessageText`) VALUES ('$number', '$message')";
 	echo "$sql";
 }
