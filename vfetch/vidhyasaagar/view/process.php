@@ -1,8 +1,7 @@
 <?php 
 
 $name_and_number = $_GET['name'];
-
-$name_and_number = serialize($name_and_number);
+$name_and_number = base64_encode(serialize($name_and_number));
 
 
 ?>
