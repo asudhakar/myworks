@@ -7,26 +7,43 @@ $name_and_number = serialize($name_and_number);
 
 ?>
 
+<html><head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
 
+  <script type="text/javascript" src="//code.jquery.com/jquery-compat-git.js"></script>
 
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script type="text/javascript">//<![CDATA[
+$(window).on('load', function() {
+$('textarea').keyup(updateCount);
+$('textarea').keydown(updateCount);
 
-
-
-<script type="text/javascript">
-function LimtCharacters(txtMsg, CharLength, indicator) {
-chars = txtMsg.value.length;
-document.getElementById(indicator).innerHTML = CharLength - chars;
-if (chars > CharLength) {
-txtMsg.value = txtMsg.value.substring(0, CharLength);
+function updateCount() {
+    var cs = $(this).val().length;
+    if(cs < 160){
+    	$('#characters').text(cs);
+    }else{
+    	
+    	$('#characters').text('160 characters exceded. 2 sms will be sent');
+    }
 }
-}
+});//]]> 
+
 </script>
+
+  
 </head>
+
 <body>
-<div style="font-family:Verdana; font-size:13px">
-Number of Characters Left:
-<label id="lblcount" style="background-color:#E2EEF1;color:Red;font-weight:bold;">140</label><br/>
-<textarea id="mytextbox" rows="5" cols="25" onkeyup="LimtCharacters(this,140,'lblcount');"></textarea>
-</div>
-</body>
-</html>
+  <textarea class="form-control" rows="5" id="comment"></textarea>
+<span id="characters"><span>
+  
+
+
+
+
+</span></span></body></html>

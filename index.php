@@ -1,37 +1,38 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>we-lcome</title>
+<html><head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-compat-git.js"></script>
+
+
+<script type="text/javascript">//<![CDATA[
+$(window).on('load', function() {
+$('textarea').keyup(updateCount);
+$('textarea').keydown(updateCount);
+
+function updateCount() {
+    var cs = $(this).val().length;
+    if(cs < 160){
+    	$('#characters').text(cs);
+    }else{
+    	
+    	$('#characters').text('160 characters exceded. 2 sms will be sent');
+    }
+}
+});//]]> 
+
+</script>
+
+  
 </head>
-<style type="text/css">
-	
-@media (max-width: 700px) {
 
-		.sudhakar{
-			font-size: 23px;
-			color: red;
-		}
-
-	}
-
-
-</style>
 <body>
-<div class="sudhakar">test</div>
+  <textarea></textarea>
+<span id="characters"><span>
+  
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-</body>
-</html>
+
+</span></span></body></html>
