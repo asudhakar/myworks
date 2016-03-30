@@ -14,4 +14,4 @@ echo $target_file;
 }
 
 
-header("Location: view/dashboard.php?file_path=$target_file");
+// header("Location: view/dashboard.php?file_path=$target_file");
