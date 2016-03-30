@@ -14,8 +14,28 @@ echo "<pre>";
 print_r($name_and_numbers);
 echo "</pre>";
 
+$link = db_connect();
 
 foreach ($name_and_numbers as $key => $number) {
-	$sql = "INSERT INTO `messageout` (`MessageTo` , `MessageText`) VALUES ('$number', '$message')";
-	echo "$sql";
+	$sql = "INSERT INTO `MessageOut` (`MessageTo` , `MessageText`) VALUES ('$number', '$message')";
+	executeQuery($sql, $link);
+	
 }
+
+
+
+	function db_connect(){
+		$connection = mysqli_connect('localhost', 'root', 'palaniM@67', 'up');
+		if (!$connection) {
+		    die("Connection failed: " . mysqli_connect_error());
+		    exit();
+		}
+		return $connection;
+	}
+
+
+	function executeQuery($query, $link){
+		if(!empty($link)){
+			return mysqli_query($link, $query);
+		}
+	}
