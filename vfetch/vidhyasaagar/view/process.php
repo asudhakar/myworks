@@ -30,7 +30,7 @@ function updateCount() {
     	$('#characters').text('160 characters exceded. 2 sms will be sent');
     }
 }
-});//]]> 
+});
 
 </script>
 
