@@ -34,6 +34,12 @@
 	
  ?>
 <div class="container">
+
+<form method="get" action="process.php">
+	
+
+
+
             
   <table class="table">
     <tbody>
@@ -60,6 +66,8 @@
       ?>
     </tbody>
   </table>
+
+  </form>
 </div>
 
 
