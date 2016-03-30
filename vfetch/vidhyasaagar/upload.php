@@ -7,3 +7,6 @@
 $target_dir = "files/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 echo $target_file;
+
+
+header('Location: view/dashboard.php?file_path='.$target_dir);
