@@ -11,7 +11,7 @@
 	}
 
 	function loginPageSessionCheck(){
-		if(isset($_SESSION["userDetails"])){
+		if(!empty($_SESSION["userDetails"])){
 			header('location: ../index.php');
 		}
 	}
