@@ -15,7 +15,7 @@
     <meta charset="utf-8">
     <meta name="robots" content="noindex">
 
-    <title>Change log - Login</title>
+    <title>Vefetch SMS API - Login</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" type="text/css" href="../css/logincss.css">
