@@ -24,7 +24,7 @@
             <li role="presentation"><a href="view/login.php?action=logout">Logout</a></li>
           </ul>
         </nav>
-        <h3 class="text-muted">VEFETCH SMS API</h3>
+        <h3 class="text-muted"><img src="images/company_logo.png" height="50px" width="50px">VEFETCH SMS API</h3>
       </div>
       <div class="jumbotron" style="height: 80%;">
         	<h2 style="font-family: -webkit-body;">Please Upload Your Excel File</h2>
