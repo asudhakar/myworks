@@ -65,7 +65,6 @@
 	}
 
 	function executeQuery($query, $link){
-		echo $query;
 		return mysqli_query($link, $query);
 	}
 	function db_connect_local(){

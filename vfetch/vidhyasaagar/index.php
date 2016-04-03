@@ -42,13 +42,19 @@
 
       <?php 
 
-        $sql = "SELECT `file_name` FROM `files`";
+        $sql = "SELECT * FROM `files`";
         $link = db_connect_local();
         $result = executeQuery($sql, $link);
         while($row = mysqli_fetch_assoc($result)) {
-          $final_output[] = $row['file_name'];
+          $final_output['id'][] = $row['id'];
+          $final_output['file_name'][] = $row['file_name'];
         }
         print_r($final_output);
+
+        // foreach ($final_output as $key => $value) {
+          
+        // }
+        // echo '<a href="view/dashboard.php?file_path='.$target_file.'">';
 
 
 
