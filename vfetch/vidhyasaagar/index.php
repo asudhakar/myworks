@@ -40,7 +40,18 @@
 			</form>
 
 
-      <?php echo "sudhakar"; ?>
+      <?php 
+
+        $sql = "SELECT `file_name` FROM `files`";
+        $link = db_connect_local();
+        $result = executeQuery($sql, $link);
+
+        print_r($result);
+
+
+
+
+       ?>
 
 
       </div>

@@ -71,6 +71,14 @@
 			return mysqli_query(serviceDBConnection(), $query);
 		}
 	}
+	function db_connect_local(){
+		$connection = mysqli_connect('localhost', "root", "palaniM@67", "vidyasaagar");
+			if (!$connection) {
+			    die("Connection failed: " . mysqli_connect_error());
+			    exit();
+			}
+			return $connection;
+	}
 
 	function getAffectedRows($link){
 		return mysqli_affected_rows($link);

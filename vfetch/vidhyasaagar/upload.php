@@ -28,11 +28,3 @@ if ($uploadOk == 0) {
 // header("Location: view/dashboard.php?file_path=$target_file");
 
 
-function db_connect_local(){
-	$connection = mysqli_connect('localhost', "root", "palaniM@67", "vidyasaagar");
-		if (!$connection) {
-		    die("Connection failed: " . mysqli_connect_error());
-		    exit();
-		}
-		return $connection;
-}
