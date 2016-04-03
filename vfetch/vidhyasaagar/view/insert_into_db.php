@@ -19,7 +19,7 @@ foreach ($name_and_numbers as $key => $number) {
 	// executeQuery($sql, $link);
 	
 }
-header('Location: ../index.php');
+// header('Location: ../index.php');
 
 	function db_connect(){
 		$connection = mysqli_connect('40.76.8.137', "vidyasaagar", "vidyasaagar", "vidyasaagar", 3306);
