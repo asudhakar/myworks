@@ -48,6 +48,7 @@
       <?php
 
       $i = 1; 
+      $totalhtml = "";
       foreach ($final_output as $class => $student_values) {
       	$html1 = "<h2>$class</h2>";
       	foreach ($student_values as $number_text => $number_and_names) {

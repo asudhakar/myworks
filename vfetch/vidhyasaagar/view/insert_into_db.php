@@ -1,6 +1,6 @@
 <?php 
 
-
+include_once '../controllers/function.php';
 
 $name_and_numbers = $_POST['name_and_number'];
 $message = $_POST['message'];
@@ -18,14 +18,7 @@ foreach ($name_and_numbers as $key => $number) {
 	executeQuery($sql, $link);
 	
 }
-if (!unlink($path))
-  {
-  echo ("Error deleting $path");
-  }
-else
-  {
-  echo ("Deleted $path");
-  }
+delete_file($path);
 header('Location: ../index.php');
 
 	function db_connect(){
@@ -43,6 +36,7 @@ header('Location: ../index.php');
 			return mysqli_query($link, $query);
 		}
 	}
+
 
 
 

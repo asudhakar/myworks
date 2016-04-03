@@ -28,7 +28,7 @@
       </div>
       <div class="jumbotron" style="height: 80%;">
         	<h2 style="font-family: -webkit-body;">Please Upload Your Excel File</h2>
-        	<br/><br/><br/>
+        	
         	<form action="upload.php" method="post" enctype="multipart/form-data">
     
 			    <input type="file" class="form-control" name="fileToUpload" id="fileToUpload">

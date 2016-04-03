@@ -195,3 +195,15 @@
 		$result = file_get_contents($url, false, $context);
 		if ($result === FALSE) { echo "error"; }
 	}
+
+	
+	function delete_file($path){
+		if (!unlink($path))
+		{
+		  echo ("Error deleting $path");
+		}
+		else
+		{
+		  echo ("Deleted $path");
+		}
+	}
