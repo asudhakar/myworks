@@ -30,10 +30,13 @@
         	<h2 style="font-family: -webkit-body;">Please Upload Your Excel File</h2>
         	
         	<form action="upload.php" method="post" enctype="multipart/form-data">
-    
-			    <input type="file" class="form-control" name="fileToUpload" id="fileToUpload">
-			    <br/>	
-			    <input type="submit" class="btn btn-info" style="font-size: 13px;"value="Upload File" name="submit">
+          <div class="row">
+          <input type="file" class="form-control" name="fileToUpload" id="fileToUpload">
+            <div class="col-sm-10"></div>
+          <input type="submit" class="btn btn-info" style="font-size: 13px;"value="Upload File" name="submit">
+            <div class="col-sm-2"></div>
+          </div>
+			    
 			</form>
       </div>
       <footer class="footer">
