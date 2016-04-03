@@ -45,8 +45,8 @@
         $sql = "SELECT `file_name` FROM `files`";
         $link = db_connect_local();
         $result = executeQuery($sql, $link);
-
-        print_r($result);
+        $row = mysqli_fetch_assoc($result);
+        print_r($row);
 
 
 
