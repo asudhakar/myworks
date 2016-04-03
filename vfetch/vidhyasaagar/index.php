@@ -48,12 +48,12 @@
         while($row = mysqli_fetch_assoc($result)) {
           $final_output[$row['id']] = $row['file_name'];
         }
-        print_r($final_output);
+        // print_r($final_output);
 
-        // foreach ($final_output as $key => $value) {
-          
-        // }
-        // echo '<a href="view/dashboard.php?file_path='.$target_file.'">';
+        foreach ($final_output as $key => $value) {
+          echo '<a href="view/dashboard.php?file_path='.$value.'">'.$value.'</a><input type="submit" class="btn btn-warning" style="font-size: 13px;"value="delete">';
+        }
+        
 
 
 
