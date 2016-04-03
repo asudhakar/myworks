@@ -47,6 +47,7 @@ function updateCount() {
   <textarea name="message" class="form-control" rows="5" id="comment"></textarea>
 <span id="characters"><span></span></span>
 <input type="submit" class="btn btn-primary" value="send">
+<a href="../index.php"><input type="button" class="btn btn-warning" value="cancel"></a>
 </form>
 	
   </div>

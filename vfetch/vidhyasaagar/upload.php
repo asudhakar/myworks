@@ -18,13 +18,13 @@ if ($uploadOk == 0) {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
 
     	$sql = "INSERT INTO `files` (`file_name`) VALUES ('$target_file')";
-    	echo "$sql";
+    	// echo "$sql";
 		executeQuery($sql, $link);
     } else {
     	echo "Error in inserting";
     }
 }
 
-// header("Location: view/dashboard.php?file_path=$target_file");
+header("Location: view/dashboard.php?file_path=$target_file");
 
 

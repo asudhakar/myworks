@@ -18,7 +18,6 @@ foreach ($name_and_numbers as $key => $number) {
 	executeQuery($sql, $link);
 	
 }
-delete_file($path);
 header('Location: ../index.php');
 
 	function db_connect(){

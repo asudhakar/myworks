@@ -68,6 +68,8 @@
     </tbody>
   </table>
   <input type="submit" class="btn btn-primary" value="submit">
+  <a href="../index.php"><input type="button" class="btn btn-warning" value="cancel"></a>
+
   </form>
 </div>
 
