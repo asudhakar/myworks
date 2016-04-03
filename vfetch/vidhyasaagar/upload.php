@@ -3,7 +3,7 @@ include_once 'controllers/function.php';
 $target_dir = "files/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
-
+$link = db_connect_local();
 
 if (file_exists($target_file)) {
     $uploadOk = 0;
