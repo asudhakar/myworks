@@ -26,7 +26,7 @@
         </nav>
         <img src="images/company_logo.png" height="125px" width="220px">
       </div>
-      <div class="jumbotron" style="height: 80%;">
+      <div class="jumbotron">
         	<h2 style="font-family: -webkit-body;">Please Upload Your Excel File</h2>
         	
         	<form action="upload.php" method="post" enctype="multipart/form-data">
@@ -51,7 +51,7 @@
         // print_r($final_output);
 
         foreach ($final_output as $key => $value) {
-          echo '<div><a href="view/dashboard.php?file_path='.$value.'">'.$value.'</a><form action="delete.php" method="get"><input type="submit" class="btn btn-danger" style="font-size: 13px;" name="id" value="'.$key.'"></form></div><br/>';
+          echo '<div><a href="view/dashboard.php?file_path='.$value.'">'.$value.'</a><form action="delete.php" method="get"><input type="submit" class="btn btn-danger" style="font-size: 13px;"  value="delete"></form></div><br/>';
         }
         
 
