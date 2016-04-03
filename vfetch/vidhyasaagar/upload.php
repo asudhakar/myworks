@@ -4,7 +4,7 @@ $target_dir = "files/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $link = db_connect_local();
-
+print_r($_FILES);
 if (file_exists($target_file)) {
     $uploadOk = 0;
 }
