@@ -65,11 +65,7 @@
 	}
 
 	function executeQuery($query, $link){
-		if(!empty($link)){
-			return mysqli_query($link, $query);
-		}else{
-			return mysqli_query(serviceDBConnection(), $query);
-		}
+		return mysqli_query($link, $query);
 	}
 	function db_connect_local(){
 		$connection = mysqli_connect('localhost', "root", "palaniM@67", "vidyasaagar");
