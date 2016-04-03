@@ -44,6 +44,7 @@ function updateCount() {
 	<input type="hidden" name="name_and_number" value="<?php echo $name_and_number; ?>">
   <input type="hidden" name="path" value="<?php echo $path; ?>">
 	<h2>Enter the message</h2>
+  
   <textarea name="message" class="form-control" rows="5" id="comment"></textarea>
 <span id="characters"><span></span></span>
 <input type="submit" class="btn btn-primary" value="send">
