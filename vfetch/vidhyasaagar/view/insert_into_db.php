@@ -31,11 +31,6 @@ header('Location: ../index.php');
 	}
 
 
-	function executeQuery($query, $link){
-		if(!empty($link)){
-			return mysqli_query($link, $query);
-		}
-	}
 
 
 
