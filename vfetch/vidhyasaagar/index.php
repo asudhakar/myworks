@@ -31,7 +31,7 @@
         	
         	<form action="upload.php" method="post" enctype="multipart/form-data">
           <div class="row">
-            <div class="col-sm-10"><input type="file" class="form-control" name="fileToUpload" id="fileToUpload"></div>
+            <div class="col-sm-10"><input type="file" class="form-control" name="fileToUpload" id="fileToUpload" required></div>
             <div class="col-sm-2"> <input type="submit" class="btn btn-info" style="font-size: 13px;"value="Upload File" name="submit"></div>
           </div>
 			    
