@@ -51,7 +51,7 @@
         // print_r($final_output);
 
         foreach ($final_output as $key => $value) {
-          echo '<a href="view/dashboard.php?file_path='.$value.'">'.$value.'</a><input type="submit" class="btn btn-warning" style="font-size: 13px;"value="delete">';
+          echo '<div><a href="view/dashboard.php?file_path='.$value.'">'.$value.'</a><form action="delete.php" method="get"><input type="submit" class="btn btn-danger" style="font-size: 13px;" name="id" value="'.$key.'"></form></div><br/>';
         }
         
 
