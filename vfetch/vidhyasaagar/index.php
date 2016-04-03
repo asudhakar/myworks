@@ -31,12 +31,12 @@
         	
         	<form action="upload.php" method="post" enctype="multipart/form-data">
           <div class="row">
-          <input type="file" class="form-control" name="fileToUpload" id="fileToUpload">
-            <div class="col-sm-10"></div>
-          <input type="submit" class="btn btn-info" style="font-size: 13px;"value="Upload File" name="submit">
-            <div class="col-sm-2"></div>
+            <div class="col-sm-10"><input type="file" class="form-control" name="fileToUpload" id="fileToUpload"></div>
+            <div class="col-sm-2"> <input type="submit" class="btn btn-info" style="font-size: 13px;"value="Upload File" name="submit"></div>
           </div>
 			    
+			    
+			   
 			</form>
       </div>
       <footer class="footer">
