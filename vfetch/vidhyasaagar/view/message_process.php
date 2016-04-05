@@ -67,7 +67,11 @@ discuss important matters. Please make it convenient to participate. Thank you-S
 
 <script type="text/javascript">
     
-    $('.message-box').attr("placeholder", "from jquery event");
+    $('.message-button').click(function(){
+      var value =   $(this).val();
+      $('.message-box').attr("placeholder", value);
+    });
+    
 
 
 </script>
