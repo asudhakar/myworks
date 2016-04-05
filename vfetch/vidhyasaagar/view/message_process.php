@@ -66,7 +66,6 @@ function updateCount() {
         while($row = mysqli_fetch_assoc($result)) {
           $final_output[$row['template_name']] = $row['template_message'];
         }
-        print_r($final_output);
         foreach ($final_output as $title => $value) {
           echo '<input type="button" class="btn btn-primary message-button" name="'.$value.'" value="'.$title.'"><br/>';
         }
