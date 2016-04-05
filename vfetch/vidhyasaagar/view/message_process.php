@@ -47,7 +47,7 @@ function updateCount() {
   <div class="jumbotron">
     <div class="row">
       <div class="col-sm-9">
-        <textarea name="message" class="form-control" rows="5" id="comment"></textarea>
+        <textarea name="message" class="form-control message-box" rows="5" id="comment"></textarea>
       </div>
       <div class="col-sm-3">
         <a href="#">test</a>
@@ -61,7 +61,12 @@ function updateCount() {
 	
   </div>
 
+<script type="text/javascript">
+    
+    ('.message-box').attr("placeholder", "from jquery event");
 
+
+</script>
 
 
 </body></html>
