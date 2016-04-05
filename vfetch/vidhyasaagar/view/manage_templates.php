@@ -1,3 +1,9 @@
+<?php 
+
+
+ ?>
+
+
 <html><head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta name="robots" content="noindex, nofollow">
@@ -16,10 +22,12 @@
   		<h1>Manage Templates</h1>
   		<div class="jumbotron">
   		<form method="post" action="template_do.php">
-  		<h1>Add a template</h1>
-		  	<input type="text-box" class="form-control" name="template_name" required>
+  		<h3>Add a template</h3>
+		  	<input type="text-box" class="form-control" name="template_name" placeholder="enter you title here" required>
 		  	<br/>
 		  	 <textarea name="template-message" class="form-control message-box" rows="5" id="comment" placeholder="enter your message here" ></textarea>
+		  	 <input type="submit" class="btn btn-primary">
+		  	 <a href="../index.php"><input type="button" class="btn btn-warning" value="cancel"></a>
 		</form>
 
 		<br/>
@@ -27,6 +35,9 @@
 		<div>
 			
 			<?php
+
+
+				
 
 			?>
 
