@@ -7,7 +7,7 @@ if(isset($_GET['delete'])){
 }else{
 	print_r($_POST);
 	$template_name = $_POST['template_name'];
-	$template_message = $_POST['template_message'];
+	$template_message = $_POST['template-message'];
 	insert_template($template_name, $template_message, $link);
 }
 
