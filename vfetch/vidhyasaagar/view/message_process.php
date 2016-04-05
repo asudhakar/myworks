@@ -63,7 +63,7 @@ function updateCount() {
 
 <script type="text/javascript">
     
-    ('.message-box').attr("placeholder", "from jquery event");
+    $('.message-box').attr("placeholder", "from jquery event");
 
 
 </script>
