@@ -47,9 +47,9 @@ function updateCount() {
     <div class="col-sm-9">
     <h2>Enter the message</h2>
     </div>
-    <div class="col-sm-3">
-    <a href="#">Manage Templates</a>
-    </div>
+    
+    <a href="manage_templates.php"><input type="button" class="btn btn-success" value="Manage Templates"></a>
+   
   </div>
   <div class="jumbotron">
     <div class="row">
