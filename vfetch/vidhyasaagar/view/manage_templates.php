@@ -13,10 +13,11 @@
   <body>
   	
   	<div class="container">
+  		<div class="jumbotron">
 
-
-  	<h1>Welcome</h1>
-
+		  	<input type="text-box" class="form-control" name="template_name" required>
+		  	 <textarea name="template-message" class="form-control message-box" rows="5" id="comment" placeholder="enter your message here" ></textarea>
+		</div>
   	</div>
 
 
