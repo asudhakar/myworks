@@ -16,10 +16,10 @@ $link = db_connect();
 foreach ($name_and_numbers as $key => $number) {
 	$sql = "INSERT INTO `MessageOut` (`MessageTo` , `MessageText`) VALUES ('$number', '$message')";
 	echo $sql;
-	executeQuery($sql, $link);
+	// executeQuery($sql, $link);
 	
 }
-header('Location: ../index.php');
+// header('Location: ../index.php');
 
 	function db_connect(){
 		$connection = mysqli_connect('40.76.8.137', "vidyasaagar", "vidyasaagar", "vidyasaagar", 3306);
