@@ -10,10 +10,11 @@ if(isset($_GET['delete'])){
 	insert_template($template_name, $template_message, $link);
 }
 
-header("Location: message_templates.php");
+// header("Location: message_templates.php");
 
 function insert_template($template_name, $template_message, $link){
 	$sql = "INSERT INTO `message_templates` (`template_name`, `template_message`) VALUES('$template_name','$template_message')";
+	echo "$sql";
 	executeQuery($sql, $link);
 }
 
