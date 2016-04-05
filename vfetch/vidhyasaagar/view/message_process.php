@@ -43,7 +43,14 @@ function updateCount() {
 <form action="insert_into_db.php" method="post">
 	<input type="hidden" name="name_and_number" value="<?php echo $name_and_number; ?>">
   <input type="hidden" name="path" value="<?php echo $path; ?>">
-	<h2>Enter the message</h2>
+  <div class="row">
+    <div class="col-sm-9">
+    <h2>Enter the message</h2>
+    </div>
+    <div class="col-sm-3">
+    <a href="#">Manage Templates</a>
+    </div>
+  </div>
   <div class="jumbotron">
     <div class="row">
       <div class="col-sm-9">
