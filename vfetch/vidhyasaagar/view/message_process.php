@@ -50,9 +50,7 @@ function updateCount() {
         <textarea name="message" class="form-control message-box" rows="5" id="comment" placeholder="enter your message here"></textarea>
       </div>
       <div class="col-sm-3">
-        <input type="button" class="btn btn-primary message-button" name="Dear Sir, A Meeting of our Trust is convened on 27.02.2016, Saturday at 10.00 A.M in the Trust Hall of our School, Sankagiri to 
-
-discuss important matters. Please make it convenient to participate. Thank you-Secretary" value="test1">
+        <input type="button" class="btn btn-primary message-button" name="Dear Sir, A Meeting of our Trust is convened on 27.02.2016, Saturday at 10.00 A.M in the Trust Hall of our School, Sankagiri to discuss important matters. Please make it convenient to participate. Thank you-Secretary" value="test1">
         <input type="button" class="btn btn-primary message-button" name="my content2" value="test2">
         <input type="button" class="btn btn-primary message-button" name="my content3" value="test3">
       </div>
