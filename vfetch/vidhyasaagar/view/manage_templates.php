@@ -13,10 +13,25 @@
   <body>
   	
   	<div class="container">
+  		<h1>Manage Templates</h1>
   		<div class="jumbotron">
-
+  		<form method="post" action="template_do.php">
+  		<h1>Add a template</h1>
 		  	<input type="text-box" class="form-control" name="template_name" required>
+		  	<br/>
 		  	 <textarea name="template-message" class="form-control message-box" rows="5" id="comment" placeholder="enter your message here" ></textarea>
+		</form>
+
+		<br/>
+		<hr/>
+		<div>
+			
+			<?php
+
+			?>
+
+
+		</div>
 		</div>
   	</div>
 
