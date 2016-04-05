@@ -45,7 +45,14 @@ function updateCount() {
   <input type="hidden" name="path" value="<?php echo $path; ?>">
 	<h2>Enter the message</h2>
   <div class="jumbotron">
-  <textarea name="message" class="form-control" rows="5" id="comment"></textarea>
+    <div class="row">
+      <div class="col-sm-9">
+        <textarea name="message" class="form-control" rows="5" id="comment"></textarea>
+      </div>
+      <div class="col-sm-3">
+        <a href="#">test</a>
+      </div>
+    </div>
   </div>
 <span id="characters"><span></span></span>
 <input type="submit" class="btn btn-primary" value="send">
