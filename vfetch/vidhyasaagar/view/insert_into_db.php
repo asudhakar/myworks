@@ -11,7 +11,7 @@ $path = $_POST['path'];
 
 
 
-$link = db_connect();
+// $link = db_connect();
 
 foreach ($name_and_numbers as $key => $number) {
 	$sql = "INSERT INTO `MessageOut` (`MessageTo` , `MessageText`) VALUES ('$number', '$message')";
