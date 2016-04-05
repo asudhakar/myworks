@@ -69,7 +69,7 @@ discuss important matters. Please make it convenient to participate. Thank you-S
     
     $('.message-button').click(function(){
       var value =   $(this).attr("name");
-      $('.message-box').attr("value", value);
+      $('.message-box').html(value);
     });
     
 
