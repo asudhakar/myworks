@@ -11,7 +11,7 @@ $path = $_POST['path'];
 
 
 
-// $link = db_connect();
+$link = db_connect();
 
 foreach ($name_and_numbers as $key => $number) {
 	$sql = "INSERT INTO `MessageOut` (`MessageTo` , `MessageText`) VALUES ('$number', '$message')";
@@ -22,7 +22,7 @@ foreach ($name_and_numbers as $key => $number) {
 // header('Location: ../index.php');
 
 	function db_connect(){
-		$connection = mysqli_connect('40.76.8.137', "vidyasaagar", "vidyasaagar", "vidyasaagar", 3306);
+		$connection = mysqli_connect('gigabytehome.ddns.net', "vidyasaagar", "vidyasaagar", "vidyasaagar", 3306);
 		if (!$connection) {
 		    die("Connection failed: " . mysqli_connect_error());
 		    exit();
