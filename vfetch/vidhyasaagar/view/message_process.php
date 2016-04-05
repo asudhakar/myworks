@@ -47,10 +47,14 @@ function updateCount() {
   <div class="jumbotron">
     <div class="row">
       <div class="col-sm-9">
-        <textarea name="message" class="form-control message-box" rows="5" id="comment"></textarea>
+        <textarea name="message" class="form-control message-box" rows="5" id="comment" placeholder="enter your message here"></textarea>
       </div>
       <div class="col-sm-3">
-        <a href="#">test</a>
+        <button class="btn btn-primary message-button" value="Dear Sir, A Meeting of our Trust is convened on 27.02.2016, Saturday at 10.00 A.M in the Trust Hall of our School, Sankagiri to 
+
+discuss important matters. Please make it convenient to participate. Thank you-Secretary">Test1</button>
+        <button class="btn btn-primary message-button">Test2</button>
+        <button class="btn btn-primary message-button">Test3</button>
       </div>
     </div>
   </div>
