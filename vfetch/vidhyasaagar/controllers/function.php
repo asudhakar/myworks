@@ -21,7 +21,6 @@
 		$unserialized_details = unserialize($base64unserialized_details);
 		return $unserialized_details;
 	}
-
 	function createSession($data){
 		$userDetails['id'] = '1';
 	 	$userDetails['username'] = 'vidyasaagar';
@@ -68,7 +67,7 @@
 		return mysqli_query($link, $query);
 	}
 	function db_connect_local(){
-		$connection = mysqli_connect('localhost', "root", "palaniM@67", "vidyasaagar");
+		$connection = mysqli_connect('localhost', "root", "", "vidyasaagar");
 			if (!$connection) {
 			    die("Connection failed: " . mysqli_connect_error());
 			    exit();
@@ -186,12 +185,11 @@
 	function publish($selectedValues){
 		$url = 'http://staging.service.infinitewp.com/service/ChangeLog/app/publish.php';
 		$data = array('selectedValues' => $selectedValues);
-
 		// use key 'http' even if you send the request to https://...
 		$options = array(
 		    'http' => array(
 		        'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
-		        'method'  => 'POST',
+		        'method'  => 'POST',	
 		        'content' => http_build_query($data),
 		    ),
 		);
