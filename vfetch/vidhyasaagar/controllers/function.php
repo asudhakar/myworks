@@ -23,9 +23,9 @@
 	}
 	function createSession($data){
 		$userDetails['id'] = '1';
-	 	$userDetails['username'] = 'vidyasaagar';
+	 	$userDetails['username'] = 'demo';
 	 	$userDetails['email'] = 'vefetchtechnologies@gmail.com';
-	 	$userDetails['password'] = 'vidyasaagar';
+	 	$userDetails['password'] = 'demo1234';
 	 	$userDetails['admin'] = '1';
 		$_SESSION["userDetails"] = base64_encode(serialize($userDetails));
 		if(isset($_SESSION['userDetails'])){
@@ -50,7 +50,7 @@
 	function isValidateUser($username, $password){
 		realEscape($username);
 		realEscape($password);
-		if($username == "vidyasaagar" && $password == "vidyasaagar"){
+		if($username == "demo" && $password == "demo1234"){
 			return createSession($username);
 		}else{
 			return false;
