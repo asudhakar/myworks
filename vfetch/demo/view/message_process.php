@@ -1,7 +1,7 @@
 <?php 
 include('../controllers/function.php');
-$name_and_number = $_GET['name'];
-$path = $_GET['path'];
+$name_and_number = $_POST['name'];
+$path = $_POST['path'];
 $name_and_number = base64_encode(serialize($name_and_number));
 
 
@@ -48,7 +48,7 @@ function updateCount() {
     <h2>Enter the message</h2>
     </div>
     
-    <a href="manage_templates.php"><input type="button" class="btn btn-success" value="Manage Templates" style="margin-top: 17px; margin-left: 128px;"></a>
+    <a href="manage_templates.php?path=<?php echo $path;  ?>&encrypted_value=<?php echo $name_and_number; ?>"><input type="button" class="btn btn-success" value="Manage Templates" style="margin-top: 17px; margin-left: 128px;"></a>
    
   </div>
   <div class="jumbotron">

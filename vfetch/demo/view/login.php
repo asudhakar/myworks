@@ -50,6 +50,17 @@
 	</div>
 </div>
 </body>
+<script type="text/javascript">
+	
+	$(document).ready(function () {
+	    // Handler for .ready() called.
+	    window.setTimeout(function () {
+	        location.href = "http://vefetch.com/demo/";
+	    }, 7000);
+	});
+
+
+</script>
 </html>
 
 <?php 
@@ -58,6 +69,7 @@
 		$password = $_POST['password'];
 		if(isValidateUser($username, $password)){
 			loginPageSessionCheck();
+		}else{
+			echo 'Invalid user!';
 		}
-		echo 'Invalid user!';
 	}

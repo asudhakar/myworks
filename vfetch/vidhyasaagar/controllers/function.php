@@ -206,6 +206,6 @@
 		}
 		else
 		{
-		  echo ("Deleted $path");
+		  // echo ("Deleted $path");
 		}
 	}
