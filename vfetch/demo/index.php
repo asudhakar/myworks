@@ -51,7 +51,8 @@
       
         if(!empty($final_output)){
           foreach ($final_output as $key => $value) {
-            echo '<div><a href="view/dashboard.php?file_path='.$value.'">'.$value.'</a><form action="delete.php" method="get"><input type="hidden" name="id" value="'.$key.'"><input type="hidden" name="file" value="'.$value.'"><input type="submit" class="btn btn-danger" style="font-size: 13px;"  value="delete"></form></div><br/>';
+            $name = explode("/", $value);
+            echo '<div><a href="view/dashboard.php?file_path='.$value.'">'.$name[1].'</a><form action="delete.php" method="get"><input type="hidden" name="id" value="'.$key.'"><input type="hidden" name="file" value="'.$value.'"><input type="submit" class="btn btn-danger" style="font-size: 13px;"  value="delete"></form></div><br/>';
           }
         } else{
           echo "Please add some excel file";
