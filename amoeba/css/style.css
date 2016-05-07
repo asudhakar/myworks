@@ -338,7 +338,7 @@ section.section {
 	background-image: url(../img/parallax/img2.jpg);
 }
 #testimonials{	
-	background-image: url(../img/parallax/img3.jpg);
+	background-image: url(../img/parallax/img3.jpeg);
 }
 /*===========================
   --- Header & menu ----
@@ -432,7 +432,7 @@ h1 a.navbar-brand {
 
 section.featured {
 	padding: 200px 0 60px;
-	background: #70B9B0;
+	background: #F54B17;
 	color: #fdfdfd;
 }
 
@@ -651,7 +651,7 @@ nav#filter a {
 }
 
 
-.portfolio-items article img {width:100%;} 
+.portfolio-items article img {width:100%;height: 384px;} 
 
 .portfolio-item {
 	display: block;

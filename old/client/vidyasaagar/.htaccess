@@ -1,0 +1,7 @@
+
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^vidyasaagar\.vefetch\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.vidyasaagar\.vefetch\.com$
+RewriteRule ^/?$ "http\:\/\/ec2\-52\-23\-164\-92\.compute\-1\.amazonaws\.com\/myworks\/vfetch\/vidhyasaagar\/" [R=301,L]
+
