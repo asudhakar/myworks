@@ -20,7 +20,7 @@
 		<link rel="stylesheet" href="skin/default.css">
     </head>
 	 
-    <body>
+    <body oncontextmenu="return false">
 		<section id="header" class="appear"></section>
 		<div class="navbar navbar-fixed-top" role="navigation" data-0="line-height:100px; height:100px; background-color:rgba(0,0,0,0.3);" data-300="line-height:60px; height:60px; background-color:rgba(0,0,0,1);">
 			 <div class="container">
@@ -133,7 +133,7 @@
 				</div>
 
 					<div class="row align-center mar-bot40">
-						<div class="col-md-2">
+						<!-- <div class="col-md-2">
 							<div class="team-member">
 								<figure class="member-photo"><img src="img/team/karthick.jpg"  alt="" style="
     height: 168px;
@@ -149,7 +149,7 @@
 									<span>CEO, Founder</span>
 								</div>
 							</div>
-						</div>
+						</div> -->
 						
 						<div class="col-md-2">
 							<div class="team-member">
@@ -163,7 +163,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-2">
+						<div class="col-md-3">
 							<div class="team-member">
 								<figure class="member-photo"><img src="img/team/sudhakar.jpg" alt="" style="
     height: 168px;
@@ -187,7 +187,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-2">
+						<div class="col-md-3">
 							<div class="team-member">
 								<figure class="member-photo"><img src="img/team/siva.jpeg" alt="" style="
     height: 168px;
@@ -260,7 +260,6 @@
 										 <div class="portfolio-desc align-center">
 											<div class="folio-info">
 												<h5><a href="#">Sankari Lorry Owners Association</a></h5>
-												<a href="img/portfolio/img1.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
 											 </div>										   
 										 </div>
 									</div>
@@ -272,7 +271,6 @@
 										 <div class="portfolio-desc align-center">
 											<div class="folio-info">
 												<h5><a href="#">Reliance Petrol Bunk</a></h5>
-												<a href="img/portfolio/img2.png" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
 											 </div>										   
 										 </div>
 									</div>
@@ -285,7 +283,6 @@
 										 <div class="portfolio-desc align-center">
 											<div class="folio-info">
 												<h5><a href="#">AEEO</a></h5>
-												<a href="img/portfolio/img3.png" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
 											 </div>										   
 										 </div>
 									</div>
@@ -467,6 +464,17 @@
 	<script src="js/validate.js"></script>
     <script src="js/main.js"></script>
         <script type="text/javascript">
+
+        	document.onmousedown=disableclick;
+			status="Right Click Disabled";
+			function disableclick(event)
+			{
+			  if(event.button==2)
+			   {
+			     
+			     return false;    
+			   }
+			}
             // When the window has finished loading create our google map below
             google.maps.event.addDomListener(window, 'load', init);
         
