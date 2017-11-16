@@ -9,9 +9,6 @@
 		}
 
 		public function test(){
-		
-			
-
 			$table_name = 'users';
 			$this_email = 'asudhakar@live.in';
 			$wpdb = $this->database;
@@ -20,11 +17,6 @@
 			echo "<pre>";
 			print_r($query_result);
 		}
-
-		
-
-
-
 	}	
 
 
