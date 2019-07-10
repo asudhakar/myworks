@@ -31,19 +31,20 @@
 
     function adjacentElementsProduct($inputArray) {
         $i = 0;
-        $adjacent_products_pos[] = 0;
-        $adjacent_products_neg[] = 0;
-        for(;$i < count($inputArray);){
-            $adjacent_products_value = $inputArray[$i]*$inputArray[$i+1];
-            if($adjacent_products_value > 0){
-                $adjacent_products_pos[] =  $adjacent_products_value;
-            }else{
-                $adjacent_products_neg[] = abs($adjacent_products_value);
-            }
+        $adjacent_products_value = [];
+        $count = count($inputArray)-1;
+        for(;$i < $count;){
+            $adjacent_products_value[] = $inputArray[$i]*$inputArray[$i+1];
             $i++;
         }
-        $max_positive_adjacent_product_value = max($adjacent_products_pos);
-        $max_negative_adjacent_product_value = max($adjacent_products_neg);
-        return ($max_positive_adjacent_product_value > $max_negative_adjacent_product_value)?(-1 * abs($max_negative_adjacent_product_value)):$max_positive_adjacent_product_value;
+
+        return max($adjacent_products_value);
     }
+
+
+    function shapeArea($n) {
+        return pow($n,2)+pow($n-1,2);
+//        return ($n*$n)+(($n-1)*($n-1));
+    }
+
 
