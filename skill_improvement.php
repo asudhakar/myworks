@@ -29,4 +29,21 @@
         return ($inputString == $reversed_string)?true:false;
     }
 
+    function adjacentElementsProduct($inputArray) {
+        $i = 0;
+        $adjacent_products_pos[] = 0;
+        $adjacent_products_neg[] = 0;
+        for(;$i < count($inputArray);){
+            $adjacent_products_value = $inputArray[$i]*$inputArray[$i+1];
+            if($adjacent_products_value > 0){
+                $adjacent_products_pos[] =  $adjacent_products_value;
+            }else{
+                $adjacent_products_neg[] = abs($adjacent_products_value);
+            }
+            $i++;
+        }
+        $max_positive_adjacent_product_value = max($adjacent_products_pos);
+        $max_negative_adjacent_product_value = max($adjacent_products_neg);
+        return ($max_positive_adjacent_product_value > $max_negative_adjacent_product_value)?(-1 * abs($max_negative_adjacent_product_value)):$max_positive_adjacent_product_value;
+    }
 
