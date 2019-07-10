@@ -21,3 +21,12 @@
         }
     }
 
+
+    function checkPalindrome($inputString) {
+        $splited_string = str_split($inputString, 1);
+        $reversed_splited_string = array_reverse($splited_string);
+        $reversed_string = join("", $reversed_splited_string);
+        return ($inputString == $reversed_string)?true:false;
+    }
+
+
