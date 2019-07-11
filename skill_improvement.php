@@ -206,6 +206,45 @@
     }
 
 
+    function isIPv4Address($inputString) {
+        $ips = explode('.', $inputString);
+        if(count($ips) == 4){
+            foreach ($ips as $ip){
+                if(!is_numeric($ip)){
+                    return false;
+                }else{
+                    if(!(($ip>=0)&&($ip<=255))){
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+
+
+function avoidObstacles($inputArray) {
+    $jump = 2;
+    $i = 0;
+
+    while($i < count($inputArray)){
+        if($inputArray[$i] % $jump === 0){
+            $jump += 1;
+            $i = 0;
+            continue;
+        }
+
+        $i += 1;
+    }
+
+    return $jump;
+}
+
+
+
 
 
 
