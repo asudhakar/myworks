@@ -155,6 +155,57 @@
         return ($firsthalf == $secondhalf)?true:false;
     }
 
+    function sortByHeight($a) {
+        $temp = $a;
+        sort($temp);
+        $temp = array_values(array_diff( $temp, [-1] ));
+        $a_temp = array_diff( $a, [-1] );
+        $i = 0;
+        foreach ($a_temp as $key => $value){
+            $a_temp[$key] = $temp[$i];
+            $a[$key] = $a_temp[$key];
+            $i++;
+        }
+        return $a;
+    }
+
+
+    function arrayChange($inputArray) {
+        $count = 0;
+        for ($i = 0; $i < count($inputArray)- 1; $i++) {
+            while($inputArray[$i + 1] <= $inputArray[$i]) {
+                $inputArray[$i + 1]++;
+                $count++;
+            }
+        }
+        return $count;
+    }
+
+
+    function areSimilar($a, $b) {
+        $swapped = false;
+        for($i=0; $i<count($a); $i++){
+            if($a[$i] != $b[$i]){
+                if($swapped){
+                    return false;
+                }else{
+                    for($j=$i+1; $j<count($a); $j++){
+                        if($a[$j] != $b[$j]){
+                            $temp = $a[$j];
+                            $a[$j] = $a[$i];
+                            $a[$i] = $temp;
+                            $swapped = true;
+                            $i=-1;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        return true;
+    }
+
+
 
 
 
