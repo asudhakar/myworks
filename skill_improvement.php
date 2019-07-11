@@ -244,6 +244,40 @@ function avoidObstacles($inputArray) {
 }
 
 
+function domainForwarding($redirects) {
+    $redirects = [["godaddy.net", "godaddy.com"],
+        ["godaddy.org", "godaddycares.com"],
+        ["godady.com", "godaddy.com"],
+        ["godaddy.ne", "godaddy.net"]];
+    $domainForwarding = array();
+    $j = 0;
+    $count = count($redirects);
+    if($count > 1){
+
+
+        foreach (array_reverse($redirects) as $key => $redirect){
+            array_push($domainForwarding[$j], array_values($redirect));
+            unset($redirects[$key]);
+            $temp_name = end($domainForwarding[$j]);
+            for($i = 0; $i < count($redirects); $i++){
+                if(in_array($temp_name, $redirects[$i])){
+                    $domainForwarding[$j][] = $value;
+                    unset($redirects[$key]);
+                }
+            }
+
+
+        }
+    }else{
+        $value = $redirects[0];
+        sort($value);
+        $domainForwarding[] = $value;
+    }
+    print_r($domainForwarding);
+}
+
+
+
 
 
 
