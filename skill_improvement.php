@@ -245,29 +245,56 @@ function avoidObstacles($inputArray) {
 
 
 function domainForwarding($redirects) {
-    $redirects = [["godaddy.net", "godaddy.com"],
-        ["godaddy.org", "godaddycares.com"],
-        ["godady.com", "godaddy.com"],
-        ["godaddy.ne", "godaddy.net"]];
+    $redirects = $temp_redirect = [["a-b.c","a.c"],
+        ["aa-b.c","a-b.c"],
+        ["bb-b.c","a-b.c"],
+        ["cc-b.c","a-b.c"],
+        ["d-cc-b.c","bb-b.c"],
+        ["e-cc-b.c","bb-b.c"]];
     $domainForwarding = array();
     $j = 0;
     $count = count($redirects);
     if($count > 1){
-
-
-        foreach (array_reverse($redirects) as $key => $redirect){
-            array_push($domainForwarding[$j], array_values($redirect));
-            unset($redirects[$key]);
-            $temp_name = end($domainForwarding[$j]);
-            for($i = 0; $i < count($redirects); $i++){
-                if(in_array($temp_name, $redirects[$i])){
-                    $domainForwarding[$j][] = $value;
-                    unset($redirects[$key]);
+        for($i = $count-1; $i>=0; $i--){
+            if(!empty($redirects[$i])){
+                if(count($domainForwarding)>1){
+                    $domainForwarding[$j] = $redirects[$i];
+                }else{
+                    array_push($domainForwarding, array_values($redirects[$i]));
+                }
+                unset($redirects[$i]);
+                $temp_name = end($domainForwarding[$j]);
+                foreach ($redirects as $key => $redirect){
+                    if(in_array($temp_name, $redirect)){
+                        $domainForwarding[$j] = array_merge($domainForwarding[$j], $redirect);
+                        unset($redirects[$key]);
+                    }
+                }
+                $j++;
+            }
+        }
+        $tempdomainForwarding = $domainForwarding;
+        // print_r($tempdomainForwarding);
+        $domainForwardingFinal = array();
+        $count = count($tempdomainForwarding)+1;
+        $j=0;
+        if($count > 1) {
+            for ($i = 0; $i < $count; $i++) {
+                if (!empty($tempdomainForwarding[$i])) {
+                    $domainForwardingFinal[$j] = $tempdomainForwarding[$i];
+                    unset($tempdomainForwarding[$i]);
+                    foreach ($tempdomainForwarding as $key => $domains){
+                        if(count(array_intersect($domainForwardingFinal[$j], $domains))!=0){
+                            $domainForwardingFinal[$j] = array_unique(array_merge($domainForwardingFinal[$j], $domains));
+                            unset($tempdomainForwarding[$key]);
+                        }
+                    }
+                    $j++;
                 }
             }
-
-
         }
+        print_r(arsort($domainForwardingFinal));
+
     }else{
         $value = $redirects[0];
         sort($value);
