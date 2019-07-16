@@ -304,6 +304,32 @@ function domainForwarding($redirects) {
 }
 
 
+    function hourglassSum($arr) {
+
+        $arr = [[1, 1, 1, 0, 0, 0],
+                [0, 1, 0, 0, 0, 0],
+                [1, 1, 1, 0, 0, 0],
+                [0, 0, 2, 4, 4, 0],
+                [0, 0, 0, 2, 0, 0],
+                [0, 0, 1, 2, 4, 0]];
+
+        for($i=0; $i<6; $i++){
+//            $temp[] = ($arr[$i][0]+$arr[$i][1]+$arr[$i][2])+($arr[$i+1][0]+$arr[$i+1][1]+$arr[$i+1][2])+($arr[$i+2][0]+$arr[$i+2][1]+$arr[$i+2][2]);
+//            $temp[] = ($arr[$i][1]+$arr[$i][2]+$arr[$i][3])+($arr[$i+1][1]+$arr[$i+1][2]+$arr[$i+1][3])+($arr[$i+2][1]+$arr[$i+2][2]+$arr[$i+2][3]);
+//            $temp[] = ($arr[$i][2]+$arr[$i][3]+$arr[$i][4])+($arr[$i+1][2]+$arr[$i+1][3]+$arr[$i+1][4])+($arr[$i+2][2]+$arr[$i+2][3]+$arr[$i+2][4]);
+//            $temp[] = ($arr[$i][3]+$arr[$i][4]+$arr[$i][5])+($arr[$i+1][3]+$arr[$i+1][4]+$arr[$i+1][5])+($arr[$i+2][3]+$arr[$i+2][4]+$arr[$i+2][5]);
+
+            $temp[] = ($arr[$i][0]+$arr[$i][1]+$arr[$i][2])+$arr[$i+1][1]+($arr[$i+2][0]+$arr[$i+2][1]+$arr[$i+2][2]);
+            $temp[] = ($arr[$i][1]+$arr[$i][2]+$arr[$i][3])+$arr[$i+1][2]+($arr[$i+2][1]+$arr[$i+2][2]+$arr[$i+2][3]);
+            $temp[] = ($arr[$i][2]+$arr[$i][3]+$arr[$i][4])+$arr[$i+1][3]+($arr[$i+2][2]+$arr[$i+2][3]+$arr[$i+2][4]);
+            $temp[] = ($arr[$i][3]+$arr[$i][4]+$arr[$i][5])+$arr[$i+1][4]+($arr[$i+2][3]+$arr[$i+2][4]+$arr[$i+2][5]);
+        }
+
+        print_r($temp);
+
+    }
+
+
 
 
 
